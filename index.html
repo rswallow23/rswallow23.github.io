@@ -11,6 +11,8 @@
 	$(document).ready(function(){
 		$.ajax({
 	        method: "GET",
+	        crossDomain: true,
+	        dataType: 'jsonp',
 	        url: "http://api.petfinder.com/pet.getRandom",
 	        data:"key="+key+"&callback=?"
     	}).done(function(data){
