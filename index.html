@@ -12,7 +12,7 @@
 		$.ajax({
 	        method: "GET",
 	        url: "http://api.petfinder.com/pet.getRandom",
-	        data:"key="+key
+	        data:"key="+key+"&callback=?"
     	}).done(function(data){
     		$("body").append(data);
     	});
