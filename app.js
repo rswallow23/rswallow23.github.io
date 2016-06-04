@@ -6,8 +6,9 @@ $(document).ready(function(){
         crossDomain: true,
         dataType: 'jsonp',
         url: "http://api.petfinder.com/pet.getRandom",
-        data:"key="+key+"&callback=?"
+        data:"key="+key+"&callback=?&format=json&output=basic&animal=dog"
 	}).done(function(data){
+		console.log(data);
 		$("body").append(data);
 	});
 })
